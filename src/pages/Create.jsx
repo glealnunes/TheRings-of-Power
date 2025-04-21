@@ -12,41 +12,29 @@ function Create() {
     forjadoPor: '',
   });
 
-  const [anéis, setAnéis] = useState([]);
+  const [aneis, setAneis] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     axios.get('http://localhost:3000/anel')
-      .then(res => setAnéis(res.data))
+      .then(res => setAneis(res.data))
       .catch(err => console.log(err));
   }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const counts = anéis.reduce((acc, anel) => {
+    const counts = aneis.reduce((acc, anel) => {
       acc[anel.forjadoPor] = (acc[anel.forjadoPor] || 0) + 1;
       return acc;
     }, {});
 
     const { forjadoPor } = values;
-    if (forjadoPor === 'Elfos' && (counts['Elfos'] || 0) >= 3) {
-      alert('O número máximo de anéis para Elfos foi atingido.');
-      return;
-    }
-
-    if (forjadoPor === 'Anões' && (counts['Anões'] || 0) >= 7) {
-      alert('O número máximo de anéis para Anões foi atingido.');
-      return;
-    }
-
-    if (forjadoPor === 'Homens' && (counts['Homens'] || 0) >= 9) {
-      alert('O número máximo de anéis para Homens foi atingido.');
-      return;
-    }
-
-    if (forjadoPor === 'Sauron' && (counts['Sauron'] || 0) >= 1) {
-      alert('Já existe um anel forjado por Sauron.');
+    if ((forjadoPor === 'Elfos' && (counts['Elfos'] || 0) >= 3) ||
+        (forjadoPor === 'Anões' && (counts['Anões'] || 0) >= 7) ||
+        (forjadoPor === 'Homens' && (counts['Homens'] || 0) >= 9) ||
+        (forjadoPor === 'Sauron' && (counts['Sauron'] || 0) >= 1)) {
+      alert('Número máximo atingido para ' + forjadoPor);
       return;
     }
 
@@ -76,9 +64,9 @@ function Create() {
               <label htmlFor="nome">Nome do Anel</label>
               <input
                 type="text"
-                id="nome"
+                // id="nome"
                 name="nome"
-                placeholder='Digite o nome'
+                placeholder='Nome do Anel'
                 onChange={e => setValues({ ...values, nome: e.target.value })}
                 required
               />
@@ -89,7 +77,7 @@ function Create() {
                 type="text"
                 id="poder"
                 name="poder"
-                placeholder='Digite o poder'
+                placeholder='Poder do Anel'
                 onChange={e => setValues({ ...values, poder: e.target.value })}
                 required
               />
@@ -100,7 +88,7 @@ function Create() {
                 type="text"
                 id="forjadoPor"
                 name="forjadoPor"
-                placeholder='Digite quem forjou'
+                placeholder='Forjado Por'
                 onChange={e => setValues({ ...values, forjadoPor: e.target.value })}
                 required
               />
@@ -111,12 +99,12 @@ function Create() {
                 type="text"
                 id="portador"
                 name="portador"
-                placeholder='Digite o portador'
+                placeholder='Portador'
                 onChange={e => setValues({ ...values, portador: e.target.value })}
                 required
               />
             </div>
-            <button type="submit" className="btn-criar">Criar</button>
+            <button type="submit" className="btn-criar">Criar Anel</button>
           </form>
         </div>
       </motion.div>

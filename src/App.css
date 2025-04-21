@@ -1,9 +1,69 @@
 @import "https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Spicy+Rice&family=Unbounded:wght@200..900&display=swap";
 
-.App {
-  text-align: center;
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
 }
+
+html,
+body {
+  height: 100%;
+  min-height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.App {
+  font-family: 'Spicy Rice', regular;
+  text-align: center;
+  background-color: #11001C;
+  height: 100%;
+  min-height: 100vh;
+  color: white;
+  text-align: center;
+} 
+
+.App .container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 8px;
+} 
+
+
 
 .App-logo {
   height: 40vmin;
@@ -31,9 +91,6 @@
   color: #61dafb;
 }
 
-.fade-in {
-  animation: fadeIn 2s ease-in-out;
-}
 
 @keyframes fadeIn {
   from {
@@ -57,10 +114,6 @@
     transform: translateX(0);
     opacity: 1;
   }
-}
-h1 {
-  font-family: 'Spicy Rice', regular;
-  font-size: 200px;
 }
 .fundo {
   background-image: url('./assets/fundoTela.png');
@@ -86,30 +139,6 @@ h1 {
   background-color: #5cc78b; 
   color: #FFFFFF; 
 }
-card-container {
-  background-color: #02010A;
-  width: 840px;
-  height: 500px;
-  border-radius: 50px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 auto; 
-}
-
-.card-item {
-  width: 256px;
-  height: 400px;
-  background-color: #DEAAFF; 
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Unbounded', sans-serif
-}
 
 
 .card-item img {
@@ -123,22 +152,6 @@ card-container {
   color: #10002B;
 }
 
-.edit-btn {
-  width: 50px;
-  height: 24px;
-  color: #DEAAFF;
-  background-color: #10002B;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 30px;
-}
-
-.anel-img {
-  width: 100px;
-  height: auto;
-  margin-bottom: 10px;
-}
 
 .description-container {
   background-color: #11001C;
