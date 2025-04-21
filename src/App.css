@@ -101,9 +101,6 @@ img {
   }
 }
 
-.slide-in {
-  animation: slideIn 1s ease-in-out;
-}
 
 @keyframes slideIn {
   from {
@@ -162,23 +159,7 @@ img {
   border-radius: 8px;
 }
 
-.card-coringa {
-  height: 400px;
-  background-color: #DEAAFF;
-  background-image: url('./assets/fundoCardCoringa.png');
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  color: #02010A;
-  font-family: 'Unbounded', sans-serif; 
-  font-weight: 200; 
-  line-height: 0;
-}
+
 .strong-300{
   font-weight: 300; 
 }

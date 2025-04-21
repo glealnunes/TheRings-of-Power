@@ -33,17 +33,17 @@ function Carousel({ aneis, onDelete }) {
         {aneis.map((anel) => (
           <RingCard key={anel.id} anel={anel} onDelete={onDelete} />
         ))}
-          {/* <div className="card-coringa slide-in">
-            <p>Um desafio para</p>
-            <p className="strong-300">governar todos eles,</p>
-            <p>Um desafio para</p>
-            <p className="strong-300">encontrá-los,</p>
-            <p>Um desafio</p>
-            <p>para trazê-los</p>
-            <p>todos,</p>
-            <p className="strong-400">e na escuridão</p>
-            <p className="strong-500">prendê-los.</p>
-          </div> */}
+          <div className="cardRingMagic slide-in">
+            <h4>Um desafio para</h4>
+            <h4>governar todos eles,</h4>
+            <h4>Um desafio para</h4>
+            <h4>encontrá-los,</h4>
+            <h4>Um desafio</h4>
+            <h4>para trazê-los</h4>
+            <h4>todos,</h4>
+            <h4>e na escuridão</h4>
+            <h4>prendê-los.</h4>
+          </div>
       </Slider>
     </div>
   );

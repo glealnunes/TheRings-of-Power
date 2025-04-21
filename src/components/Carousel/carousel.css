@@ -9,3 +9,37 @@
     flex-direction: column;
     background-color: #02010A;
 }
+
+.slider-container h4 {
+    margin: auto;
+    display: flex;   
+    align-items: baseline;
+    flex-direction: column;
+    padding: 2vh;
+}
+.cardRingMagic {
+    height: 73vh;
+    background-color: #DEAAFF;
+    background-image: url('../../assets/fundoCardCoringa.png');
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+   align-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    color: #02010A;
+    font-family: 'Unbounded', sans-serif; 
+    font-weight: 100; 
+    line-height: 0;
+}
+
+.slide-in {
+    animation: slideIn 1s ease-in-out;
+  }
+
+  .slick-slide {
+    padding: 0 10px; /* Espaço de 10px em cada lado dos cards */
+  }
+  
+  .slick-list {
+    margin: 0 -10px; /* Compensa o padding para não cortar as laterais */
+  }
