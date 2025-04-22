@@ -1,9 +1,28 @@
 .footer {
+    font-family: 'Spicy Rice', cursive;
+    color: #FBE300;
+    font-size: 1.2rem;
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
+    padding: 10px;
+    margin-top: 40px;
+    text-align: center;
   }
 
-.footer h3 {
-    font-size: 6vh;
-}
+  .footer h3 {
+    margin: 0;
+    font-weight: normal;
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      font-size: 1rem;
+      padding: 16px 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      font-size: 0.9rem;
+      padding: 14px 6px;
+    }
+  }

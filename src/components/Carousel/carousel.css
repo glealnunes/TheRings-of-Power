@@ -1,45 +1,79 @@
 .slider-container {
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
-    grid-gap: 8px;
-    border-radius: 50px;
-    padding: 16px 4px;
-    display: flex;
-    flex-direction: column;
-    background-color: #02010A;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  grid-gap: 8px;
+  border-radius: 50px;
+  padding: 16px 4px;
+  display: flex;
+  flex-direction: column;
+  background-color: #02010A;
 }
 
 .slider-container h4 {
-    margin: auto;
-    display: flex;   
-    align-items: baseline;
-    flex-direction: column;
-    padding: 2vh;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: 'Unbounded', sans-serif;
+  margin: 4px 0;
 }
+
 .cardRingMagic {
-    height: 73vh;
-    background-color: #DEAAFF;
-    background-image: url('../../assets/fundoCardCoringa.png');
-    border-radius: 30px;
-    padding: 10px;
-    display: flex;
-   align-content: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    color: #02010A;
-    font-family: 'Unbounded', sans-serif; 
-    font-weight: 100; 
-    line-height: 0;
+  width: 100%;
+  height: 400px;
+  background-color: #DEAAFF;
+  background-image: url('../../assets/fundoCardCoringa.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  color: #02010A;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 100;
+  text-align: center;
+  line-height: 1.4;
 }
 
 .slide-in {
-    animation: slideIn 1s ease-in-out;
-  }
+  animation: slideIn 1s ease-in-out;
+}
 
-  .slick-slide {
-    padding: 0 10px; /* Espaço de 10px em cada lado dos cards */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slick-slide {
+  padding: 0 10px;
+}
+
+.slick-list {
+  margin: 0 -10px;
+}
+
+@media (max-width: 768px) {
+  .cardRingMagic {
+    height: 300px;
+    padding: 8px;
   }
-  
-  .slick-list {
-    margin: 0 -10px; /* Compensa o padding para não cortar as laterais */
+  .slider-container {
+    padding: 10px;
   }
+  .slider-container h4 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardRingMagic {
+    height: 250px;
+    padding: 5px;
+  }
+  .slider-container h4 {
+    font-size: 0.8rem;
+  }
+}

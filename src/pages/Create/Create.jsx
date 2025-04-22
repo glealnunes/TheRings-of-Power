@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react"
-import anel from '../assets/anelSilmaril.png';
+import anel from '../../assets/anel.png';
+import "./create.css"
 
 function Create() {
   const [values, setValues] = useState({
@@ -45,70 +46,62 @@ function Create() {
 
   return (
     <motion.div
-      className="d-flex w-100 vh-100 d-flex flex-column justify-content-center"
-      style={{ backgroundColor: "#02010A" }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      <motion.div
-        className='d-flex justify-content-center align-items-center container-criar'
-        initial={{ scale: 0.9 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="card-criar">
-          <img src={anel} alt="Anel" className="anel-img" />
+       className="d-flex w-100 vh-100 d-flex flex-column justify-content-center"
+       style={{ backgroundColor: "#02010A" }}
+       initial={{ opacity: 0 }}
+       animate={{ opacity: 1 }}
+       transition={{ duration: 0.5 }}
+     >
+        <div className='singleRingCard'>
+        <div className="singleRingCard-container">
+          <img src={anel} alt="Anel" />
           <form onSubmit={handleSubmit}>
-            <div className="form-group">
+            <div className='singleRingCard-input'>
               <label htmlFor="nome">Nome do Anel</label>
               <input
                 type="text"
-                // id="nome"
+                 id="nome"
                 name="nome"
-                placeholder='Nome do Anel'
                 onChange={e => setValues({ ...values, nome: e.target.value })}
                 required
               />
             </div>
-            <div className="form-group">
+            <div className='singleRingCard-input'>
               <label htmlFor="poder">Poder do Anel</label>
               <input
                 type="text"
                 id="poder"
                 name="poder"
-                placeholder='Poder do Anel'
                 onChange={e => setValues({ ...values, poder: e.target.value })}
                 required
               />
             </div>
-            <div className="form-group">
+            <div className='singleRingCard-input'>
               <label htmlFor="forjadoPor">Forjado Por</label>
               <input
                 type="text"
                 id="forjadoPor"
                 name="forjadoPor"
-                placeholder='Forjado Por'
                 onChange={e => setValues({ ...values, forjadoPor: e.target.value })}
                 required
               />
             </div>
-            <div className="form-group">
+            <div className='singleRingCard-input'>
               <label htmlFor="portador">Portador</label>
               <input
                 type="text"
                 id="portador"
                 name="portador"
-                placeholder='Portador'
                 onChange={e => setValues({ ...values, portador: e.target.value })}
                 required
               />
             </div>
-            <button type="submit" className="btn-criar">Criar Anel</button>
+            <button type="submit">Criar Anel</button>
           </form>
         </div>
-      </motion.div>
-    </motion.div>
+    </div>
+     </motion.div>
+
   );
 }
 

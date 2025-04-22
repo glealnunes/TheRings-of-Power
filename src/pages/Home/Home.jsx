@@ -2,10 +2,11 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
-import Carousel from '../components/Carousel/Carousel';
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
+import Carousel from '../../components/Carousel/Carousel';
 
+import "./home.css"
 
 
 function Home() {
@@ -32,7 +33,7 @@ function Home() {
 
 
   return (
-    <div className='fundo' style={{ backgroundColor: "#11001C", color: "#FBE300" }}>
+    <div className='home'>
       <Header />
       <Carousel aneis={aneis} onDelete={handleDelete} />
       <Footer/>

@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import RingCard from '../RingCard/RingCard';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./carousel.css"
+import "./carousel.css";
 
 function Carousel({ aneis, onDelete }) {
   const settings = {
@@ -14,17 +14,9 @@ function Carousel({ aneis, onDelete }) {
     slidesToScroll: 3,
     initialSlide: 0,
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 2, infinite: true, dots: true } },
-      { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+      { breakpoint: 1200, settings: { slidesToShow: 2, slidesToScroll: 2, infinite: true, dots: true } },
+      { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1 } },
     ],
-    // responsive: [
-    //   { breakpoint: 1024,
-    //     settings: { slidesToShow: 2, slidesToScroll: 1, },
-    //   },
-    //   {breakpoint: 600,
-    //     settings: { slidesToShow: 1, slidesToScroll: 1, },
-    //   },
-    // ],
   };
 
   return (
@@ -33,6 +25,7 @@ function Carousel({ aneis, onDelete }) {
         {aneis.map((anel) => (
           <RingCard key={anel.id} anel={anel} onDelete={onDelete} />
         ))}
+        <div>
           <div className="cardRingMagic slide-in">
             <h4>Um desafio para</h4>
             <h4>governar todos eles,</h4>
@@ -44,6 +37,7 @@ function Carousel({ aneis, onDelete }) {
             <h4>e na escuridão</h4>
             <h4>prendê-los.</h4>
           </div>
+        </div>
       </Slider>
     </div>
   );

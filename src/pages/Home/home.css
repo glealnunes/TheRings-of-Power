@@ -1,0 +1,8 @@
+.home {
+    color:#FBE300;
+    background-color: #11001C;
+    background-image: url(../../assets/fundoTela.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
