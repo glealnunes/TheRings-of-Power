@@ -9,11 +9,18 @@
       "imagem": null
     },
     {
-      "nome": "Sarahra",
-      "poder": "Sabedoria",
-      "portador": "Secilian",
-      "forjadoPor": "Homens",
-      "id": "cPUPlQr"
+      "nome": "Plenitude",
+      "poder": "Controla tudo",
+      "portador": "Samwise",
+      "forjadoPor": "Sauron",
+      "id": "X-9r1D6"
+    },
+    {
+      "nome": "Vilya",
+      "poder": "Ar",
+      "portador": "Safira",
+      "forjadoPor": "Elfos",
+      "id": "3ciYARX"
     }
   ]
 }

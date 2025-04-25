@@ -7,35 +7,35 @@
   padding: 16px 4px;
   display: flex;
   flex-direction: column;
+  align-content: center;
   background-color: #02010A;
 }
 
-.slider-container h4 {
-  font-size: 1rem;
-  font-weight: 300;
-  font-family: 'Unbounded', sans-serif;
-  margin: 4px 0;
-}
-
 .cardRingMagic {
-  width: 100%;
-  height: 400px;
   background-color: #DEAAFF;
   background-image: url('../../assets/fundoCardCoringa.png');
   background-size: cover;
   background-position: center;
   border-radius: 30px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  height: 494px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  color: #02010A;
+  align-items: center;
   font-family: 'Unbounded', sans-serif;
-  font-weight: 100;
+  color: #10002B;
   text-align: center;
-  line-height: 1.4;
+}
+
+.cardRingMagic h4 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-family: 'Unbounded', sans-serif;
+  margin: 4px 0;
 }
 
 .slide-in {
@@ -55,25 +55,36 @@
   margin: 0 -10px;
 }
 
+@media (min-width: 768px ) and (max-width: 1200px) {
+  .cardRingMagic {
+    height: 37rem;
+  }
+}
+
 @media (max-width: 768px) {
   .cardRingMagic {
-    height: 300px;
-    padding: 8px;
+    padding: 15px;
+    max-width: 90%;
+    max-height: 100%;
+    height: 35rem;
+  }
+  
+  .cardRingMagic h4 {
+    font-size: 1.4rem;
   }
   .slider-container {
     padding: 10px;
-  }
-  .slider-container h4 {
-    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
   .cardRingMagic {
-    height: 250px;
-    padding: 5px;
+    padding: 10px;
+    max-width: 95%;
   }
-  .slider-container h4 {
-    font-size: 0.8rem;
+  
+  .cardRingMagic h4 {
+    font-size: 1rem;
   }
+
 }
