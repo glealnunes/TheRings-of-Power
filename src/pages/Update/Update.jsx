@@ -43,19 +43,19 @@ function Update() {
           <form onSubmit={handleUpdate} className="form-group">
           <div className='singleRingCard-input'>
             <label htmlFor="nome">Nome do Anel</label>
-            <input type="text" value={values.nome} onChange={e => setValues({ ...values, nome: e.target.value })} required />
+            <input type="text" autocomplete="off" value={values.nome} onChange={e => setValues({ ...values, nome: e.target.value })} required />
           </div>
           <div className='singleRingCard-input'>
             <label htmlFor="poder">Poder do Anel</label>
-            <input type="text" value={values.poder} onChange={e => setValues({ ...values, poder: e.target.value })} required />
+            <input type="text" autocomplete="off" value={values.poder} onChange={e => setValues({ ...values, poder: e.target.value })} required />
           </div>
           <div className='singleRingCard-input'>
             <label htmlFor="forjadoPor">Forjado Por</label>
-            <input type="text" value={values.forjadoPor} onChange={e => setValues({ ...values, forjadoPor: e.target.value })} required />
+            <input type="text" autocomplete="off" value={values.forjadoPor} onChange={e => setValues({ ...values, forjadoPor: e.target.value })} required />
           </div>
           <div className='singleRingCard-input'>
             <label htmlFor="portador">Portador</label>
-            <input type="text" value={values.portador} onChange={e => setValues({ ...values, portador: e.target.value })} required />
+            <input type="text" autocomplete="off" value={values.portador} onChange={e => setValues({ ...values, portador: e.target.value })} required />
           </div>
             <button type="submit">Atualizar</button>
           </form>

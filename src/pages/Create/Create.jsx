@@ -62,6 +62,7 @@ function Create() {
                 type="text"
                  id="nome"
                 name="nome"
+                autocomplete="off"
                 onChange={e => setValues({ ...values, nome: e.target.value })}
                 required
               />
@@ -72,6 +73,7 @@ function Create() {
                 type="text"
                 id="poder"
                 name="poder"
+                autocomplete="off"
                 onChange={e => setValues({ ...values, poder: e.target.value })}
                 required
               />
@@ -82,6 +84,7 @@ function Create() {
                 type="text"
                 id="forjadoPor"
                 name="forjadoPor"
+                autocomplete="off"
                 onChange={e => setValues({ ...values, forjadoPor: e.target.value })}
                 required
               />
@@ -92,6 +95,7 @@ function Create() {
                 type="text"
                 id="portador"
                 name="portador"
+                autocomplete="off"
                 onChange={e => setValues({ ...values, portador: e.target.value })}
                 required
               />
